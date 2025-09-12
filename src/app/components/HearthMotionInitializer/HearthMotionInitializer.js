@@ -5,7 +5,6 @@ import useLenis from "@/app/hooks/useLenis";
 
 const HearthMotionInitializer = () => {
   useLenis();
-  // useAos();
   useHearthMotion();
   return;
 };

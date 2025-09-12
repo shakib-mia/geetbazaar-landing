@@ -26,11 +26,20 @@ const Plans = async ({ path }) => {
 
       <div className="container py-16 relative">
         <div className="text-center">
-          <h6 className="bg-gray-700 inline-block px-4 py-2 rounded-full !text-white mx-auto">
+          <h6
+            className="bg-gray-700 inline-block px-4 py-2 rounded-full !text-white mx-auto"
+            data-animate="fade-in-up"
+          >
             Pricing
           </h6>
 
-          <h2 className="mt-4 text-center">Choose Your Package</h2>
+          <h2
+            data-animate="fade-in-up"
+            data-delay="100"
+            className="mt-4 text-center"
+          >
+            Choose Your Package
+          </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {plans.length

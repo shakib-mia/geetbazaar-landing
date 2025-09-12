@@ -37,14 +37,8 @@ export default function RootLayout({ children }) {
     >
       <body className="font-syne">
         <ThemeProvider>
-          {/* <div id="hm-wrapper"> */}
           <Navbar />
-          {/* <div id="hm-content"> */}
           {children}
-          {/* </div> */}
-          {/* </div> */}
-
-          {/* <LenisAosProvider /> */}
           <HearthMotionInitializer />
         </ThemeProvider>
 

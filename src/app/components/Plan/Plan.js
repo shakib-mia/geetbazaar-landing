@@ -11,6 +11,7 @@ const Plan = ({ name, price, _id, planName, features, specialTag }) => {
     <div
       key={_id}
       className="flex flex-col h-full rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 relative"
+      data-animate="fade-in-up"
     >
       <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
