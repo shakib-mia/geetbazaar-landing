@@ -5,6 +5,10 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import HearthMotionProvider from "./components/HearthmotionInitializer/HearthmotionInitializer";
 import { ThemeProvider } from "./components/ThemeProvider/ThemeProvider";
+import { initLenis } from "./utils/initLenis";
+import LenisAosProvider from "./components/LenisAosProvider/LenisAosProvider";
+import Script from "next/script";
+import HearthMotionInitializer from "./components/HearthMotionInitializer/HearthMotionInitializer";
 
 // Google Fonts setup
 const syne = Syne({
@@ -33,13 +37,18 @@ export default function RootLayout({ children }) {
     >
       <body className="font-syne">
         <ThemeProvider>
-          <div id="hm-wrapper">
-            <Navbar />
-            <div id="hm-content">{children}</div>
-          </div>
+          {/* <div id="hm-wrapper"> */}
+          <Navbar />
+          {/* <div id="hm-content"> */}
+          {children}
+          {/* </div> */}
+          {/* </div> */}
 
-          <HearthMotionProvider />
+          {/* <LenisAosProvider /> */}
+          <HearthMotionInitializer />
         </ThemeProvider>
+
+        <Script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></Script>
       </body>
     </html>
   );

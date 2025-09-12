@@ -21,7 +21,10 @@ export default function Home() {
             Use our live test network to see all the ways our product can help
             your business.{" "}
           </p>
-          <Button data-animate="fade-in-up">Learn More</Button>
+
+          <div data-animate="fade-in-up">
+            <Button>Learn More</Button>
+          </div>
         </aside>
 
         <aside

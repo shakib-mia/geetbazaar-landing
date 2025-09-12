@@ -16,6 +16,7 @@ const Header = () => {
         <aside>
           <h2
             data-animate="fade-in-left"
+            data-delay="1000"
             className="text-black dark:text-primary"
           >
             Distribute Your Music. Grow Your Career.
@@ -38,14 +39,14 @@ const Header = () => {
                 Get Started
               </GlowingButton>
             </div>
-            <Button
-              className="border-0 dark:hover:bg-white/50 hover:text-white hover:bg-black/50"
-              data-animate="fade-in-left"
-              data-delay="300"
-              outline
-            >
-              Watch Demo
-            </Button>
+            <div data-animate="fade-in-left" data-delay="300">
+              <Button
+                className="border-0 dark:hover:bg-white/50 hover:text-white hover:bg-black/50"
+                outline
+              >
+                Watch Demo
+              </Button>
+            </div>
           </div>
         </aside>
 

@@ -36,7 +36,7 @@ const Platforms = () => {
   // console.log(theme);
 
   return (
-    <div className="relative" data-animate="fade-in">
+    <div className="relative">
       <div className="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-white dark:from-black via-transparent to-white dark:to-black z-[99]"></div>
       <Marquee autoFill className="text-white" speed={100}>
         {platforms.map(({ logo_url, cat_name }, key) => (

@@ -92,3 +92,13 @@ h6 {
 .animate-bounce-wave {
   animation: bounce 1s infinite ease-in-out;
 }
+
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* WebKit-based browsers (Chrome, Safari, Opera) */
+*::-webkit-scrollbar {
+  display: none;
+}
