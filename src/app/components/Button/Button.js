@@ -3,6 +3,7 @@
 import React from "react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Button = (props) => {
   const {
@@ -28,9 +29,9 @@ const Button = (props) => {
 
   if (href) {
     return (
-      <a href={href} target={target} className={baseClasses} {...rest}>
+      <Link href={href} target={target} className={baseClasses} {...rest}>
         {children}
-      </a>
+      </Link>
     );
   }
 

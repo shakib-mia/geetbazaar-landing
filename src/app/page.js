@@ -156,7 +156,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Plans />
+      <Plans path={"/"} />
     </>
   );
 }
