@@ -46,16 +46,13 @@ const Navbar = () => {
   return (
     <nav
       id="navbar"
-      className={`fixed top-0 left-0 w-full z-[99999] py-4 font-rubik transition-all duration-300
-        ${scrollDirection === "down" ? "-translate-y-52" : "translate-y-0"}
-        ${
-          lastScrollY > 0
-            ? "!bg-white/70 dark:!bg-black/70 backdrop-blur-lg !text-black dark:!text-white"
-            : isHome
-            ? "bg-transparent !text-black dark:!text-white"
-            : "!text-black dark:bg-black/70 backdrop-blur-lg"
-        }
-      `}
+      className={`fixed top-0 left-0 w-full z-[99999] py-4 font-rubik transition-all duration-300 ${
+        scrollDirection === "down" ? "-translate-y-52" : "translate-y-0"
+      } ${
+        lastScrollY > 0
+          ? "!bg-white/70 dark:!bg-black/70 backdrop-blur-lg !text-black dark:!text-white"
+          : "!text-black dark:bg-black/70 backdrop-blur-lg dark:!text-white"
+      }`}
     >
       <div className="container flex items-center justify-between relative">
         {/* Logo */}
@@ -85,8 +82,8 @@ const Navbar = () => {
             </SafeLink>
           </li>
           <li>
-            <SafeLink href="/features" className="hover:text-purple-600">
-              Features
+            <SafeLink href="/plans" className="hover:text-purple-600">
+              Plans
             </SafeLink>
           </li>
           <li>
@@ -176,10 +173,10 @@ const Navbar = () => {
             </li>
             <li>
               <SafeLink
-                href="/features"
+                href="/plans"
                 className="hover:text-purple-600 inline-block py-2 px-4 w-full"
               >
-                Features
+                Plans
               </SafeLink>
             </li>
             <li>
