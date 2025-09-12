@@ -104,7 +104,12 @@ const Plans = async () => {
         </div>
 
         <div className="flex justify-center items-center mt-4">
-          <Button>Explore All</Button>
+          <Button
+            href="https://geetbazaar.adztronaut.com/plans"
+            target="_blank"
+          >
+            Explore All
+          </Button>
         </div>
       </div>
     </section>
