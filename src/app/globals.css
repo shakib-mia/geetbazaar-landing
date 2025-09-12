@@ -1,26 +1,94 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-albert-sans: "Albert Sans", sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --color-primary: #acfcff;
+
+  --background: var(--color-white);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-syne: var(--font-syne);
+  --font-albert-sans: var(--font-albert-sans);
+  --color-primary: var(--color-primary);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+[data-theme="dark"] {
+  --background: var(--color-black);
+}
+
+body,
+html {
+  @apply bg-white dark:bg-black text-black dark:text-white font-albert-sans text-lg transition-[color_background-color];
+}
+
+.container {
+  @apply px-4 mx-auto max-w-7xl;
+}
+
+[data-animate] {
+  @apply opacity-0;
+}
+
+section {
+  @apply py-16;
+}
+
+header {
+  @apply py-40;
+}
+
+/* Headings */
+h1 {
+  @apply text-black dark:text-primary text-3xl lg:text-7xl leading-[1.2] font-syne font-black;
+}
+
+h2 {
+  @apply text-black dark:text-primary text-3xl md:text-4xl lg:text-5xl leading-snug font-syne font-bold;
+}
+
+h3 {
+  @apply text-black dark:text-primary text-2xl md:text-3xl lg:text-4xl leading-snug font-syne font-semibold;
+}
+
+h4 {
+  @apply text-black dark:text-primary text-xl md:text-2xl lg:text-3xl leading-snug font-syne font-semibold;
+}
+
+h5 {
+  @apply text-black dark:text-primary text-lg md:text-xl lg:text-2xl leading-snug font-syne font-medium;
+}
+
+h6 {
+  @apply text-black dark:text-primary text-lg lg:text-xl leading-snug font-syne font-medium;
+}
+
+/* @keyframes bounce {
+  0%,
+  100% {
+    height: 10px;
+  }
+  50% {
+    height: 50px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-bounce-wave {
+  animation: bounce 1s infinite ease-in-out;
+} */
+
+@keyframes bounce {
+  0%,
+  100% {
+    height: 10px;
+  }
+  50% {
+    height: 50px;
+  }
+}
+
+.animate-bounce-wave {
+  animation: bounce 1s infinite ease-in-out;
 }
