@@ -3,10 +3,10 @@
 import useHearthMotion from "@/app/hooks/useHearthMotion";
 import useLenis from "@/app/hooks/useLenis";
 
-const HearthMotionInitializer = () => {
+const HearthMotionInitializer = ({ children }) => {
   useLenis();
   useHearthMotion();
-  return;
+  return children;
 };
 
 export default HearthMotionInitializer;

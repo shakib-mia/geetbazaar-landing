@@ -16,7 +16,7 @@ export default function Home() {
 
       <section className="grid grid-cols-1 lg:grid-cols-2 container items-center gap-12">
         <aside>
-          <h2 data-animate="fade-in-up">Real-time Strategy</h2>
+          <h3 data-animate="fade-in-up">Real-time Strategy</h3>
           <p className="lg:w-5/6 py-4" data-animate="fade-in-up">
             Use our live test network to see all the ways our product can help
             your business.{" "}
@@ -36,16 +36,16 @@ export default function Home() {
       <section className="grid grid-cols-1 lg:grid-cols-2 container items-center gap-12">
         <aside
           data-animate="fade-in-up"
-          className="w-full mx-auto bg-purple-700 aspect-square rounded-full"
+          className="w-full mx-auto bg-purple-700 aspect-square rounded-full order-2 lg:order-1"
         ></aside>
-        <aside>
-          <h2 data-animate="fade-in-up">API Documentation</h2>
+        <aside className="order-1 lg:order-2">
+          <h3 data-animate="fade-in-up">API Documentation</h3>
           <p className="lg:w-5/6 pt-4" data-animate="fade-in-up">
             Use our live test network to see all the ways our product can help
             your business.{" "}
           </p>
 
-          <ul className="py-4 space-y-2 w-2/3">
+          <ul className="py-4 space-y-2 lg:w-2/3">
             <li
               className="bg-gray-200 dark:bg-gray-900 rounded-lg p-4 flex gap-2 items-center"
               data-animate="fade-in-up"
@@ -100,7 +100,7 @@ export default function Home() {
             </li>
           </ul>
 
-          <Button data-animate="fade-in-up">Learn More</Button>
+          <Button>Learn More</Button>
         </aside>
       </section>
 

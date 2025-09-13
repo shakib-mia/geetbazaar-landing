@@ -24,8 +24,8 @@ const Button = (props) => {
   if (!mounted) return null;
 
   const baseClasses = outline
-    ? `px-6 py-3 text-center border border-black dark:border-white text-black dark:text-white rounded-lg cursor-pointer transition hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black ${className}`
-    : `px-6 py-3 text-center bg-black dark:bg-white text-white dark:text-black rounded-lg cursor-pointer transition hover:bg-transparent hover:text-black dark:hover:text-white border border-black dark:border-white flex justify-center items-center gap-2 ${className}`;
+    ? `px-6 py-3 text-center border border-black dark:border-white text-black dark:text-white rounded-lg cursor-pointer transition hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black whitespace-nowrap ${className}`
+    : `px-6 py-3 text-center bg-black dark:bg-white text-white dark:text-black rounded-lg cursor-pointer transition hover:bg-transparent hover:text-black dark:hover:text-white border border-black dark:border-white flex justify-center items-center gap-2 whitespace-nowrap ${className}`;
 
   if (href) {
     return (

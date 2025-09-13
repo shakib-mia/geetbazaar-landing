@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 
-const Plan = ({ name, price, _id, planName, features, specialTag }) => {
+const Plan = ({ name, price, _id, planName, features, specialTag, id }) => {
   const isAlbum = planName.toLowerCase().includes("album");
   const link = isAlbum
     ? `https://geetbazaar.adztronaut.com/album-upload?${planName?.toLowerCase()}?${price}`
@@ -12,6 +12,7 @@ const Plan = ({ name, price, _id, planName, features, specialTag }) => {
       key={_id}
       className="flex flex-col h-full rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 relative"
       data-animate="fade-in-up"
+      data-delay={500 * id}
     >
       <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">

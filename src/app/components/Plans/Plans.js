@@ -24,7 +24,7 @@ const Plans = async ({ path }) => {
         className="absolute w-full object-cover left-0 top-0 aspect-video object-center opacity-10 bottom-0 right-0 h-full z-0"
       />
 
-      <div className="container py-16 relative">
+      <div className="container relative">
         <div className="text-center">
           <h6
             className="bg-gray-700 inline-block px-4 py-2 rounded-full !text-white mx-auto"
@@ -45,7 +45,7 @@ const Plans = async ({ path }) => {
           {plans.length
             ? plans
                 .slice(0, path === "/" ? 3 : plans.length - 1)
-                .map((plan) => <Plan {...plan} key={plan._id} />)
+                .map((plan, key) => <Plan {...plan} id={key} key={plan._id} />)
             : null}
         </div>
 

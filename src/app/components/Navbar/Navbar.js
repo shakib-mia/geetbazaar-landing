@@ -54,7 +54,7 @@ const Navbar = () => {
           : "!text-black dark:bg-black/70 backdrop-blur-lg dark:!text-white"
       }`}
     >
-      <div className="container flex items-center justify-between relative">
+      <div className="container flex items-center justify-between gap-6 lg:gap-0 relative">
         {/* Logo */}
         <SafeLink href="/" className="text-2xl font-gilroy-bold cursor-pointer">
           <Image
@@ -94,7 +94,7 @@ const Navbar = () => {
         </ul>
 
         {/* CTA & Hamburger */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 lg:gap-4">
           <ThemeToggle />
           <Button
             href="https://geetbazaar.adztronaut.com/login"
@@ -105,7 +105,7 @@ const Navbar = () => {
           </Button>
 
           <button
-            className="md:hidden focus:outline-none ml-2"
+            className="md:hidden focus:outline-none"
             onClick={() => showPhoneNav(!phoneNav)}
           >
             {phoneNav ? (

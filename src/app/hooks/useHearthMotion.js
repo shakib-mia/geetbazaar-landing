@@ -70,6 +70,10 @@ export default function useAnimateOnScroll() {
   const pathname = usePathname();
 
   useEffect(() => {
-    loadAnimateCSS().then(initHearthMotion).catch(console.error);
-  }, [pathname]); // 👈 pathname change হলে আবার চালাবে
+    const timer = setTimeout(() => {
+      loadAnimateCSS().then(initHearthMotion).catch(console.error);
+    }, 100); // সামান্য delay
+
+    return () => clearTimeout(timer);
+  }, [pathname]);
 }

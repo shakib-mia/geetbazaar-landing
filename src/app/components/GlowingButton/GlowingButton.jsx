@@ -4,7 +4,7 @@ import React from "react";
 
 const GlowingButton = ({ children, href, ...rest }) => {
   return (
-    <div className="relative flex items-center justify-center bg-black rounded-full">
+    <div className="relative flex items-center justify-center bg-black rounded-full whitespace-nowrap">
       {href ? (
         <a
           href={href}

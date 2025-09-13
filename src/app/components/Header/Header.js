@@ -27,7 +27,7 @@ const Header = () => {
             connect with listeners like never before.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex lg:gap-4">
             {/* <Button data-animate="fade-in-left" data-delay="500">
               Get Started
             </Button> */}

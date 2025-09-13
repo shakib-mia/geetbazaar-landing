@@ -33,11 +33,11 @@ html {
 }
 
 section {
-  @apply py-16;
+  @apply py-12 lg:py-16;
 }
 
 header {
-  @apply py-40;
+  @apply py-20 lg:py-40;
 }
 
 /* Headings */
