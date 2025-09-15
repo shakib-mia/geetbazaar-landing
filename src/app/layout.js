@@ -3,12 +3,8 @@
 import { Syne, Albert_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
-import HearthMotionProvider from "./components/HearthmotionInitializer/HearthmotionInitializer";
 import { ThemeProvider } from "./components/ThemeProvider/ThemeProvider";
-import { initLenis } from "./utils/initLenis";
-import LenisAosProvider from "./components/LenisAosProvider/LenisAosProvider";
 import Script from "next/script";
-import HearthMotionInitializer from "./components/HearthMotionInitializer/HearthMotionInitializer";
 
 // Google Fonts setup
 const syne = Syne({
@@ -37,11 +33,8 @@ export default function RootLayout({ children }) {
     >
       <body className="font-syne">
         <ThemeProvider>
-          {/* <HearthMotionInitializer> */}
           <Navbar />
           {children}
-          <HearthMotionInitializer />
-          {/* </HearthMotionInitializer> */}
         </ThemeProvider>
 
         <Script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></Script>

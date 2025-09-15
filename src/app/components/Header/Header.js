@@ -54,7 +54,7 @@ const Header = () => {
           <Image
             src={hero}
             alt="hero"
-            className="lg:w-1/2 mx-auto lg:scale-110 drop-shadow-[0_0_20px] dark:drop-shadow-white/45 drop-shadow-black/45"
+            className="lg:w-1/2 mx-auto lg:scale-110 drop-shadow-[0_0_40px] dark:drop-shadow-primary/40 drop-shadow-black/45"
             data-animate="fade-in"
             data-duration="1500"
           />
