@@ -11,7 +11,7 @@ const Plan = ({ name, price, _id, planName, features, specialTag, id }) => {
   return (
     <div
       className="p-1 relative"
-      // data-animate="fade-in-up"
+      data-animate="fade-in-up"
       data-delay={500 * id}
     >
       {/* {planName.toLowerCase().includes("pro") && (

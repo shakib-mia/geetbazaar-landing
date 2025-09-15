@@ -16,7 +16,8 @@ const Accordion = ({ items }) => {
         <div
           key={index}
           className="rounded-lg overflow-hidden"
-          //   data-animate="fade-in-left"
+          data-animate="fade-in-left"
+          data-delay={index * 100}
         >
           <button
             onClick={() => toggleAccordion(index)}
