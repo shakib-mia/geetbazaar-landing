@@ -4,11 +4,49 @@ import Button from "../components/Button/Button";
 import Plan from "../components/Plan/Plan";
 import Image from "next/image";
 import axios from "axios";
+import Accordion from "../components/Accordion/Accordion";
 
 const PlansPage = async () => {
   const { data: plans } = await axios.get(
     "https://musicx-be.onrender.com/plans"
   );
+  const faqs = [
+    {
+      title: "What is GeetBazaar?",
+      content:
+        "GeetBazaar is a digital music distribution platform where artists and labels can release their songs on Spotify, JioSaavn, Wynk, Gaana, Apple Music, YouTube Music, and many other platforms.",
+    },
+    {
+      title: "How can I upload my songs?",
+      content:
+        "You need to create an account on our platform and log in. Then go to the 'Song Upload' section, fill in the required details, and submit your track.",
+    },
+    {
+      title: "Does GeetBazaar provide Caller Tune / CRBT services?",
+      content:
+        "Yes. Through GeetBazaar, you can get your songs as Caller Tunes (CRBT) on Jio, Vi, Airtel, BSNL, and other operators.",
+    },
+    {
+      title: "How long does it take for a release to go live?",
+      content:
+        "Usually, songs go live on streaming platforms within 5–7 business days after submission. CRBT releases may take a little longer.",
+    },
+    {
+      title: "How will I receive my revenue?",
+      content:
+        "Your streaming and CRBT revenue will be calculated monthly and provided to your account along with detailed reports.",
+    },
+    {
+      title: "What percentage of commission does GeetBazaar take?",
+      content:
+        "GeetBazaar charges a very minimal service fee and ensures maximum revenue share goes to the artist. Revenue sharing may vary depending on the selected plan.",
+    },
+    {
+      title: "Can international artists use GeetBazaar?",
+      content:
+        "Yes, absolutely. GeetBazaar works globally, and artists from any country can release their music through our platform.",
+    },
+  ];
 
   // console.log(plans);
 
@@ -56,6 +94,18 @@ const PlansPage = async () => {
               ))
             : null}
         </div>
+
+        <section>
+          <h2
+            // data-animate="fade-in-up"
+            data-delay="100"
+            className="mt-4 text-center"
+          >
+            Frequently Asked Questions
+          </h2>
+
+          <Accordion items={faqs} />
+        </section>
 
         {/* {path === "/" && (
           <div className="flex justify-center items-center mt-8">

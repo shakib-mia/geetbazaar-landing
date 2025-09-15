@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
           {/* <HearthMotionInitializer> */}
           <Navbar />
           {children}
-          {/* <HearthMotionInitializer /> */}
+          <HearthMotionInitializer />
           {/* </HearthMotionInitializer> */}
         </ThemeProvider>
 
