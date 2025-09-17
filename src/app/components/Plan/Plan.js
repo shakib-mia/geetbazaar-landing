@@ -12,17 +12,13 @@ const Plan = ({ name, price, _id, planName, features, specialTag, id }) => {
 
   console.log(planName);
   return (
-    <div className="relative">
+    <div className="relative" data-animate="fade-in-up" data-delay={500 * id}>
       {specialTag && (
         <span className="px-2 py-1 z-50 bg-purple-600 text-white text-xs font-semibold rounded absolute top-[-13.5px] right-4">
           {specialTag}
         </span>
       )}
-      <div
-        className="relative p-1 rounded-2xl overflow-hidden h-full"
-        data-animate="fade-in-up"
-        data-delay={500 * id}
-      >
+      <div className="relative p-1 rounded-2xl overflow-hidden h-full">
         {/* Glowing border */}
         {planName.toLowerCase().includes("pro") ? (
           <span className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 blur-xl animate-spin-slow rounded-2xl"></span>
