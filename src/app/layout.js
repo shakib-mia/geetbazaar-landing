@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           {children}
         </ThemeProvider>
 
-        <Script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></Script>
+        {/* <Script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></Script> */}
       </body>
     </html>
   );
