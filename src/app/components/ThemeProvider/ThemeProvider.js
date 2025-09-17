@@ -8,8 +8,8 @@ export const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   //   const [user, setUser] = useState(initialUser);
   const [theme, setTheme] = useState("light"); // default value
-  // useHearthMotion();
-  // useLenis();
+  useHearthMotion();
+  useLenis();
 
   useEffect(() => {
     const saved = localStorage.getItem("theme");
