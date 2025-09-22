@@ -4,6 +4,7 @@
 :root {
   --font-albert-sans: "Albert Sans", sans-serif;
   --font-syne: "Syne", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
   --color-primary: #acfcff;
 
   --background: var(--color-white);
@@ -12,6 +13,7 @@
 @theme {
   --font-syne: var(--font-syne);
   --font-albert-sans: var(--font-albert-sans);
+  --font-oswald: var(--font-oswald);
   --color-primary: var(--color-primary);
 }
 
@@ -173,6 +175,50 @@ h6 {
   from {
     transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.comet-btn {
+  position: relative; /* যাতে ভেতরের layer গুলো absolute বসানো যায় */
+  padding: 12px 28px; /* ভিতরের content এর জন্য padding */
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden; /* বাইরের দিক থেকে কিছু বের হতে দেবে না */
+  border: none;
+}
+
+/* Button text উপরের layer */
+.btn-text {
+  position: relative;
+  z-index: 2; /* text সবকিছুর উপরে থাকবে */
+}
+
+/* Rotating comet border */
+.comet-border {
+  position: absolute;
+  inset: 0; /* পুরো button container জুড়ে */
+  border-radius: 12px;
+  padding: 2px; /* border এর thickness */
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 1) 0%,
+    /* শুরুতে solid white */ rgba(255, 255, 255, 0) 40%,
+    /* ধীরে ধীরে fade হয়ে যাবে */ transparent 100%
+  );
+  animation: spin 4s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1; /* text এর নিচে থাকবে */
+}
+
+/* Rotate animation */
+@keyframes spin {
   to {
     transform: rotate(360deg);
   }

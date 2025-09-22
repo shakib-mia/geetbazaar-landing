@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import hero from "./../../assets/hero.webp";
 import Image from "next/image";
 import GlowingButton from "../GlowingButton/GlowingButton";
+import CometButton from "../CometButton/CometButton";
 // import bg from "@/app/assets/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg";
 // import Button from "../Button/Button";
 // import logo from "@/app/assets/logo_text.webp";
@@ -39,13 +40,22 @@ const Header = () => {
                 Get Started
               </GlowingButton>
             </div>
-            <div data-animate="fade-in-left" data-delay="300">
-              <Button
-                className="border-0 dark:hover:bg-white/50 hover:text-white hover:bg-black/50"
-                outline
+            <div
+              className="relative"
+              data-animate="fade-in-left"
+              data-delay="300"
+            >
+              {/* <div className="animate-ping absolute left-0 top-0 w-full h-full bg-white scale-50 rounded-lg"></div> */}
+              {/* <Button
+                // className="border-0 dark:hover:bg-white/50 hover:text-white hover:bg-black/50"
+                // outline
+                href="https://geetbazaar.adztronaut.com/"
+                target="_blank"
+                // className="animate-bounce"
               >
-                Watch Demo
-              </Button>
+                Go to Dashboard
+              </Button> */}
+              <CometButton>Go to Dashboard</CometButton>
             </div>
           </div>
         </aside>

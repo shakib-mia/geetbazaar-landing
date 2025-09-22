@@ -6,6 +6,7 @@ import Button from "./components/Button/Button";
 import { HiDocumentReport } from "react-icons/hi";
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Plans from "./components/Plans/Plans";
+import ScrollMarquee from "./components/ScrollMarquee/ScrollMarquee";
 
 export default function Home() {
   return (
@@ -32,6 +33,8 @@ export default function Home() {
           className="w-full mx-auto bg-purple-700 aspect-square rounded-full"
         ></aside>
       </section>
+
+      <ScrollMarquee />
 
       <section className="grid grid-cols-1 lg:grid-cols-2 container items-center gap-12">
         <aside
@@ -100,7 +103,9 @@ export default function Home() {
             </li>
           </ul>
 
-          <Button>Learn More</Button>
+          <div data-animate="fade-in-up">
+            <Button>Learn More</Button>
+          </div>
         </aside>
       </section>
 

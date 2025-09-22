@@ -6,6 +6,12 @@ import Image from "next/image";
 import axios from "axios";
 import Accordion from "../components/Accordion/Accordion";
 
+export const metadata = {
+  title: "Plans - GeetBazaar",
+  description:
+    "Choose your package and release your music across all platforms with ease. Whether you are an independent artist or a label, we have a plan to suit your needs.",
+};
+
 const PlansPage = async () => {
   const { data: plans } = await axios.get(
     "https://musicx-be.onrender.com/plans"

@@ -1,5 +1,11 @@
 import React from "react";
 
+export const metadata = {
+  title: "Services - GeetBazaar",
+  description:
+    "Discover the comprehensive services offered by GeetBazaar to help artists and labels distribute, monetize, and analyze their music effectively.",
+};
+
 const page = () => {
   return (
     <div className="relative py-12 lg:py-32 container">
