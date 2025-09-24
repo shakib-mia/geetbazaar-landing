@@ -73,20 +73,20 @@ const PlansPage = async () => {
         <div className="text-center">
           <h6
             className="bg-gray-700 inline-block px-4 py-2 rounded-full !text-white mx-auto"
-            // data-animate="fade-in-up"
+            data-animate="fade-in-up"
           >
             Pricing
           </h6>
 
           <h2
-            // data-animate="fade-in-up"
+            data-animate="fade-in-up"
             data-delay="100"
             className="mt-4 text-center"
           >
             Choose Your Package
           </h2>
 
-          <p className="lg:w-8/12 mx-auto">
+          <p className="lg:w-8/12 mx-auto" data-animate="fade-in-up">
             Choose your package and release your music across all platforms with
             ease. Whether you are an independent artist or a label, we have a
             plan to suit your needs.
@@ -103,7 +103,7 @@ const PlansPage = async () => {
 
         <section>
           <h2
-            // data-animate="fade-in-up"
+            data-animate="fade-in-up"
             data-delay="100"
             className="mt-4 text-center"
           >

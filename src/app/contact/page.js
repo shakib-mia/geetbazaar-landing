@@ -42,7 +42,7 @@ const ContactPage = () => {
             </p>
             <div className="pl-7">
               <p>GeetBazaar HQ</p>
-              <p>Cooch Beher, West Bengal, Bangladesh</p>
+              <p>Cooch Beher, West Bengal, India</p>
             </div>
           </div>
         </aside>
